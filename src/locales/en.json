@@ -20,6 +20,9 @@
       "errorMessage": "Unfortunately, we were unable to authenticate you in the system.",
       "registerMessage": "Not have an account yet? click",
       "hereClick": "here"
+    },
+    "dashboard": {
+      "title": "Painel"
     }
   },
   "header": {
@@ -36,6 +39,15 @@
     "close": "Close",
     "delete": "Delete",
     "ok": "OK"
+  },
+
+  "charts": {
+    "errorTitle": "Error loading data",
+    "errorMessage": "Unable to retrieve graph data",
+    "userPerAgeChart": {
+      "title": "Users X Year",
+      "resume" : "Number of users by year of birth"
+    }
   },
 
   "warnings": {

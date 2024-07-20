@@ -20,6 +20,9 @@
       "errorMessage": "Infelizmente não foi possível lhe autenticar no sistema",
       "registerMessage": "Ainda não tem uma conta? clique",
       "hereClick": "aqui"
+    },
+    "dashboard": {
+      "title": "Painel"
     }
   },
 
@@ -30,8 +33,6 @@
     "english": "Inglês"
   },
 
-
-
   "buttons": {
     "register": "Cadastrar",
     "login": "Entrar",
@@ -39,6 +40,15 @@
     "close": "Fechar",
     "delete": "Excluir",
     "ok": "OK"
+  },
+
+  "charts": {
+    "errorTitle": "Erro ao carregar dados",
+    "errorMessage": "Não foi possível recuperar os dados do gráfico",
+    "userPerAgeChart": {
+      "title": "Usuários X Ano",
+      "resume" : "Quandtidade de usuários por ano de nascimento"
+    }
   },
 
   "warnings": {
