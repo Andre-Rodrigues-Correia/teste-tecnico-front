@@ -6,13 +6,23 @@
     "confirmPassword": "Confirme sua senha",
     "loginMessage": "Já tem Cadastro ? clique",
     "hereClick": "aqui",
-    "success": "Usuário cadastrado com Sucesso!"
+    "successTitle": "Sucesso!",
+    "successMessage": "Seu usuário cadastrado com Sucesso.",
+    "errorTitle": "Erro!",
+    "errorMessage": "Infelizmente não foi possível realizar seu cadastro"
   },
 
   "buttons": {
     "register": "Cadastrar",
     "save": "Salvar",
     "close": "Fechar",
-    "delete": "Excluir"
+    "delete": "Excluir",
+    "ok": "OK"
+  },
+
+  "warnings": {
+    "requiredField": "Campo obrigatório",
+    "invalidEmail": "Formato de e-mail inválido",
+    "matchPassword": "As senhas devem ser iguais"
   }
 }

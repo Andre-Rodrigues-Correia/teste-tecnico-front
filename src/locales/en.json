@@ -6,13 +6,23 @@
     "confirmPassword": "Confirm your password",
     "loginMessage": "Already registered? Click",
     "hereClick": "here",
-    "success": "User registered successfully!"
+    "successTitle": "Success!",
+    "successMessage": "Your user has successfully registered.",
+    "errorTitle": "Error!",
+    "errorMessage": "Unfortunately, we were unable to register."
   },
 
   "buttons": {
     "register": "Register",
     "save": "Save",
     "close": "Close",
-    "delete": "Delete"
+    "delete": "Delete",
+    "ok": "OK"
+  },
+
+  "warnings": {
+    "requiredField": "Required Field",
+    "invalidEmail": "Invalid E-mail",
+    "matchPassword": "Passwords must be the same"
   }
 }

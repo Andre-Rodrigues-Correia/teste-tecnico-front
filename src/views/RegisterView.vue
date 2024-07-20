@@ -1,10 +1,10 @@
 <template>
   <v-container class="d-flex flex-column ">
     <h1 class="mx-auto">{{$t('register.title').toUpperCase()}}</h1>
-    <v-form @submit.prevent="registerUser" class="w-75 mx-auto">
-      <v-text-field :label="$t('register.email')" v-model="email" required></v-text-field>
-      <v-text-field :label="$t('register.password')" v-model="password" required></v-text-field>
-      <v-text-field :label="$t('register.confirmPassword')" v-model="confirmPassword" required></v-text-field>
+    <v-form  ref="form" v-model="valid" @submit.prevent="registerUser" class="w-75 mx-auto">
+      <v-text-field :label="$t('register.email')" v-model="email" :rules="[rules.required, rules.email]"></v-text-field>
+      <v-text-field :label="$t('register.password')" v-model="password" :rules="[rules.required]"></v-text-field>
+      <v-text-field :label="$t('register.confirmPassword')" v-model="confirmPassword" :rules="[rules.required, rules.confirmPassword]"></v-text-field>
 
       <div class="d-flex justify-center align-center">
         <v-btn class="ma-4" type="submit">{{ $t('buttons.register') }}</v-btn>
@@ -16,33 +16,67 @@
       </div>
 
     </v-form>
+
+    <Snackbar v-model="snackbar.visible" :title="snackbar.title"
+              :message="snackbar.message" @close-snackbar="snackbar.visible = false"
+    />
   </v-container>
 </template>
 
 <script>
   import userService from "@/services/userService";
-
+  import Snackbar from "@/components/generics/Snackbar.vue";
   export default {
     name: 'RegisterView',
+    components: {
+      Snackbar
+    },
     data(){
       return {
         email: null,
         password: null,
-        confirmPassword: null
+        confirmPassword: null,
+        rules: {
+          required: (value) => !!value || this.$t('warnings.requiredField'),
+          email: (value) => {
+            const pattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+            return pattern.test(value) || this.$t('warnings.invalidEmail');
+          },
+          confirmPassword: () => {
+            return this.password === this.confirmPassword || this.$t('warnings.matchPassword')
+          }
+        },
+        valid:false,
+        snackbar: {
+          visible: false,
+          title: '',
+          message: '',
+        }
       }
     },
     methods: {
       async registerUser(){
+
+        await this.$refs.form.validate();
+        if(!this.valid){
+          return
+        }
 
         try {
           const createdUser = await userService.createUser({
             email: this.email,
             password: this.password
           });
-          console.log(createdUser)
-          alert(this.$t('register.success'))
+
+          localStorage.setItem('token', createdUser.token);
+          this.snackbar.title = this.$t('register.successTitle');
+          this.snackbar.message = this.$t('register.successMessage');
+          this.snackbar.visible = true;
         } catch (error) {
           console.error(`Error: ${error.message}`)
+          this.snackbar.title = this.$t('register.errorTitle');
+          this.snackbar.message = this.$t('register.errorMessage');
+          this.snackbar.visible = true;
         }
       },
       navigateTo(destiny){
