@@ -22,6 +22,12 @@
       "hereClick": "here"
     }
   },
+  "header": {
+    "title": "Bobby Soluções Educativas",
+    "idiom": "language",
+    "portuguese": "Portuguese",
+    "english": "English"
+  },
 
   "buttons": {
     "register": "Register",

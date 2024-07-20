@@ -23,6 +23,13 @@
     }
   },
 
+  "header": {
+    "title": "Bobby Soluções Educativas",
+    "idiom": "Idioma",
+    "portuguese": "Português",
+    "english": "Inglês"
+  },
+
 
 
   "buttons": {
