@@ -13,7 +13,7 @@
       "errorMessage": "Infelizmente não foi possível realizar seu cadastro"
     },
     "login": {
-      "title": "Cadastre-se",
+      "title": "Entre",
       "email": "E-mail",
       "password": "Senha",
       "errorTitle": "Erro!",

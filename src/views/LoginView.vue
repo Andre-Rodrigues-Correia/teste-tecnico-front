@@ -16,19 +16,24 @@
 
     </v-form>
 
+    <Loader v-if="isLoad"/>
+
     <Snackbar v-model="snackbar.visible" :title="snackbar.title"
               :message="snackbar.message" @close-snackbar="snackbar.visible = false"
     />
+
   </v-container>
 </template>
 
 <script>
 import userService from "@/services/userService";
 import Snackbar from "@/components/generics/Snackbar.vue";
+import Loader from "@/components/generics/Loader.vue";
 export default {
   name: 'LoginView',
   components: {
-    Snackbar
+    Snackbar,
+    Loader
   },
   data(){
     return {
@@ -46,27 +51,30 @@ export default {
         visible: false,
         title: '',
         message: '',
-      }
+      },
+      isLoad: false
     }
   },
   methods: {
     async login(){
-
       await this.$refs.form.validate();
       if(!this.valid){
         return
       }
 
       try {
+        this.isLoad = true;
         const userLogged = await userService.createUser({
           email: this.email,
           password: this.password
         });
 
         localStorage.setItem('token', userLogged.token);
+        this.isLoad = false;
         this.$router.push({name: 'home'});
       } catch (error) {
         console.error(`Error: ${error.message}`)
+        this.isLoad = false;
         this.snackbar.title = this.$t('views.login.errorTitle');
         this.snackbar.message = this.$t('views.login.errorMessage');
         this.snackbar.visible = true;

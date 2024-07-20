@@ -13,7 +13,7 @@
       "errorMessage": "Unfortunately, we were unable to register."
     },
     "login": {
-      "title": "Register",
+      "title": "Login",
       "email": "E-mail",
       "password": "Password",
       "errorTitle": "Error!",

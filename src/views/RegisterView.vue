@@ -17,6 +17,8 @@
 
     </v-form>
 
+    <Loader v-if="isLoad"/>
+
     <Snackbar v-model="snackbar.visible" :title="snackbar.title"
               :message="snackbar.message" @close-snackbar="snackbar.visible = false"
     />
@@ -26,10 +28,12 @@
 <script>
   import userService from "@/services/userService";
   import Snackbar from "@/components/generics/Snackbar.vue";
+  import Loader from "@/components/generics/Loader.vue";
   export default {
     name: 'RegisterView',
     components: {
-      Snackbar
+      Snackbar,
+      Loader
     },
     data(){
       return {
@@ -51,7 +55,8 @@
           visible: false,
           title: '',
           message: '',
-        }
+        },
+        isLoad: false
       }
     },
     methods: {
@@ -63,15 +68,18 @@
         }
 
         try {
+          this.isLoad = true;
           const createdUser = await userService.createUser({
             email: this.email,
             password: this.password
           });
 
           localStorage.setItem('token', createdUser.token);
+          this.isLoad = false;
           this.$router.push({name: 'home'})
         } catch (error) {
           console.error(`Error: ${error.message}`)
+          this.isLoad = false;
           this.snackbar.title = this.$t('views.register.errorTitle');
           this.snackbar.message = this.$t('views.register.errorMessage');
           this.snackbar.visible = true;
