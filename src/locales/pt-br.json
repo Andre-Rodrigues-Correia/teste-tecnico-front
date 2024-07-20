@@ -1,19 +1,33 @@
 {
-  "register": {
-    "title": "Cadastre-se",
-    "email": "E-mail",
-    "password": "Senha",
-    "confirmPassword": "Confirme sua senha",
-    "loginMessage": "Já tem Cadastro ? clique",
-    "hereClick": "aqui",
-    "successTitle": "Sucesso!",
-    "successMessage": "Seu usuário cadastrado com Sucesso.",
-    "errorTitle": "Erro!",
-    "errorMessage": "Infelizmente não foi possível realizar seu cadastro"
+  "views": {
+    "register": {
+      "title": "Cadastre-se",
+      "email": "E-mail",
+      "password": "Senha",
+      "confirmPassword": "Confirme sua senha",
+      "loginMessage": "Já tem Cadastro ? clique",
+      "hereClick": "aqui",
+      "successTitle": "Sucesso!",
+      "successMessage": "Seu usuário cadastrado com Sucesso.",
+      "errorTitle": "Erro!",
+      "errorMessage": "Infelizmente não foi possível realizar seu cadastro"
+    },
+    "login": {
+      "title": "Cadastre-se",
+      "email": "E-mail",
+      "password": "Senha",
+      "errorTitle": "Erro!",
+      "errorMessage": "Infelizmente não foi possível lhe autenticar no sistema",
+      "registerMessage": "Ainda não tem uma conta? clique",
+      "hereClick": "aqui"
+    }
   },
+
+
 
   "buttons": {
     "register": "Cadastrar",
+    "login": "Entrar",
     "save": "Salvar",
     "close": "Fechar",
     "delete": "Excluir",

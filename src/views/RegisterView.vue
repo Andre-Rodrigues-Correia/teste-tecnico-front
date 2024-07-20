@@ -1,17 +1,17 @@
 <template>
   <v-container class="d-flex flex-column ">
-    <h1 class="mx-auto">{{$t('register.title').toUpperCase()}}</h1>
+    <h1 class="mx-auto">{{$t('views.register.title').toUpperCase()}}</h1>
     <v-form  ref="form" v-model="valid" @submit.prevent="registerUser" class="w-75 mx-auto">
-      <v-text-field :label="$t('register.email')" v-model="email" :rules="[rules.required, rules.email]"></v-text-field>
-      <v-text-field :label="$t('register.password')" v-model="password" :rules="[rules.required]"></v-text-field>
-      <v-text-field :label="$t('register.confirmPassword')" v-model="confirmPassword" :rules="[rules.required, rules.confirmPassword]"></v-text-field>
+      <v-text-field :label="$t('views.register.email')" v-model="email" :rules="[rules.required, rules.email]"></v-text-field>
+      <v-text-field :label="$t('views.register.password')" v-model="password" :rules="[rules.required]"></v-text-field>
+      <v-text-field :label="$t('views.register.confirmPassword')" v-model="confirmPassword" :rules="[rules.required, rules.confirmPassword]"></v-text-field>
 
       <div class="d-flex justify-center align-center">
         <v-btn class="ma-4" type="submit">{{ $t('buttons.register') }}</v-btn>
 
         <p class="ma-4">
-          {{ $t('register.loginMessage')}}
-          <a class="text-primary cursor-pointer" @click="navigateTo('login')">{{$t('register.hereClick')}}</a>
+          {{ $t('views.register.loginMessage')}}
+          <a class="text-primary cursor-pointer" @click="navigateTo('login')">{{$t('views.register.hereClick')}}</a>
         </p>
       </div>
 
@@ -69,13 +69,11 @@
           });
 
           localStorage.setItem('token', createdUser.token);
-          this.snackbar.title = this.$t('register.successTitle');
-          this.snackbar.message = this.$t('register.successMessage');
-          this.snackbar.visible = true;
+          this.$router.push({name: 'home'})
         } catch (error) {
           console.error(`Error: ${error.message}`)
-          this.snackbar.title = this.$t('register.errorTitle');
-          this.snackbar.message = this.$t('register.errorMessage');
+          this.snackbar.title = this.$t('views.register.errorTitle');
+          this.snackbar.message = this.$t('views.register.errorMessage');
           this.snackbar.visible = true;
         }
       },

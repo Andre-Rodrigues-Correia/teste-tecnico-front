@@ -1,19 +1,31 @@
 {
-  "register": {
-    "title": "Register",
-    "email": "E-mail",
-    "password": "Password",
-    "confirmPassword": "Confirm your password",
-    "loginMessage": "Already registered? Click",
-    "hereClick": "here",
-    "successTitle": "Success!",
-    "successMessage": "Your user has successfully registered.",
-    "errorTitle": "Error!",
-    "errorMessage": "Unfortunately, we were unable to register."
+  "views": {
+    "register": {
+      "title": "Register",
+      "email": "E-mail",
+      "password": "Password",
+      "confirmPassword": "Confirm your password",
+      "loginMessage": "Already registered? Click",
+      "hereClick": "here",
+      "successTitle": "Success!",
+      "successMessage": "Your user has successfully registered.",
+      "errorTitle": "Error!",
+      "errorMessage": "Unfortunately, we were unable to register."
+    },
+    "login": {
+      "title": "Register",
+      "email": "E-mail",
+      "password": "Password",
+      "errorTitle": "Error!",
+      "errorMessage": "Unfortunately, we were unable to authenticate you in the system.",
+      "registerMessage": "Not have an account yet? click",
+      "hereClick": "here"
+    }
   },
 
   "buttons": {
     "register": "Register",
+    "login": "Login",
     "save": "Save",
     "close": "Close",
     "delete": "Delete",
