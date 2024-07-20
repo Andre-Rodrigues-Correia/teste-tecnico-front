@@ -1,0 +1,18 @@
+{
+  "register": {
+    "title": "Register",
+    "email": "E-mail",
+    "password": "Password",
+    "confirmPassword": "Confirm your password",
+    "loginMessage": "Already registered? Click",
+    "hereClick": "here",
+    "success": "User registered successfully!"
+  },
+
+  "buttons": {
+    "register": "Register",
+    "save": "Save",
+    "close": "Close",
+    "delete": "Delete"
+  }
+}

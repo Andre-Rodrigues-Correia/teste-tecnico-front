@@ -1,0 +1,18 @@
+{
+  "register": {
+    "title": "Cadastre-se",
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirme sua senha",
+    "loginMessage": "Já tem Cadastro ? clique",
+    "hereClick": "aqui",
+    "success": "Usuário cadastrado com Sucesso!"
+  },
+
+  "buttons": {
+    "register": "Cadastrar",
+    "save": "Salvar",
+    "close": "Fechar",
+    "delete": "Excluir"
+  }
+}
