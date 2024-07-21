@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import userService from "@/services/userService";
 import Snackbar from "@/components/generics/Snackbar.vue";
 import Loader from "@/components/generics/Loader.vue";
+import authService from "@/services/authService";
 export default {
   name: 'LoginView',
   components: {
@@ -64,14 +64,14 @@ export default {
 
       try {
         this.isLoad = true;
-        const userLogged = await userService.createUser({
+        const userLogged = await authService.login({
           email: this.email,
           password: this.password
         });
 
         localStorage.setItem('token', userLogged.token);
         this.isLoad = false;
-        this.$router.push({name: 'home'});
+        this.$router.push({name: 'dashboard'});
       } catch (error) {
         console.error(`Error: ${error.message}`)
         this.isLoad = false;

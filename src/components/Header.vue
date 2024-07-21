@@ -40,7 +40,7 @@ export default {
         { code: 'pt', label: this.$t('header.portuguese') },
         { code: 'en', label: this.$t('header.english') },
       ],
-      isDark: false,
+      isDark: true,
     };
   },
   created() {

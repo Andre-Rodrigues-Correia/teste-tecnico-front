@@ -3,7 +3,7 @@
     <h2 class="mx-auto">{{ $t('views.users.title').toUpperCase()}}</h2>
 
     <v-autocomplete
-        class="w-lg-25 mb-4" size="large"
+        class="w-lg-25 mb-4"
         v-model="search"
         :items="userNames"
         label="Buscar usuário"
@@ -112,7 +112,7 @@ export default {
       }
     },
     showEditUserModal(user){
-      this.selectedUser = user;
+      this.selectedUser = {...user};
       this.isEdit = true;
       this.showUserModal = true;
     },
@@ -121,7 +121,7 @@ export default {
       this.showUserModal = true;
     },
     showDeleteUserConfirmModal(user){
-      this.selectedUser = user;
+      this.selectedUser = {...user}
       this.showConfirmModal = true;
     },
     async saveEditedUser(user){

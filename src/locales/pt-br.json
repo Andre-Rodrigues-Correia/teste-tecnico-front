@@ -24,6 +24,9 @@
     "dashboard": {
       "title": "Painel"
     },
+    "home": {
+      "title": "Teste técnico para desenvolvedor(a) frond-end (Vue js)"
+    },
     "users": {
       "title": "usuários",
       "image": "Imagem de perfil",
@@ -44,6 +47,9 @@
       "errorDeleteMessage": "Falha ao excluir usuário",
       "errorAddMessage": "Falha ao adicionar usuário",
       "errorEditMessage": "Falha ao editar usuário"
+    },
+    "notFound": {
+      "title": "Você não tem acesso a esse conteudo"
     }
   },
 

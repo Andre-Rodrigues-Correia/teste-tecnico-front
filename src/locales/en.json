@@ -24,6 +24,9 @@
     "dashboard": {
       "title": "Painel"
     },
+    "home": {
+      "title": "Technical test for front-end developer (Vue js)"
+    },
     "users": {
       "title": "Users",
       "image": "Profile picture",
@@ -44,6 +47,9 @@
       "errorDeleteMessage": "Failed to delete user",
       "errorAddMessage": "Failed to add user",
       "errorEditMessage": "Failed to edit user"
+    },
+    "notFound": {
+      "title": "You do not have access to this content"
     }
   },
   "navigation": {
