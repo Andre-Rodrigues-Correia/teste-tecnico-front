@@ -9,7 +9,7 @@ const userService = {
             const response = await axios.post(`${BASE_URL}/api/register`, user);
             return response.data;
         } catch (error) {
-            console.error('Error in login');
+            console.error('Error in createUser');
             throw error
         }
     },
@@ -22,10 +22,28 @@ const userService = {
             console.log(response)
             return response.data.data;
         } catch (error) {
-            console.error('Error in login');
+            console.error('Error in getAllUsers');
             throw error
         }
     },
+    getUsersPerPage: async function () {
+        try {
+            const response = await axios.get(`${BASE_URL}/api/users`, {
+                params: {
+                    page: 1,
+                    per_page: 20,
+                },
+            });
+            return {
+                users: response.data.data,
+            };
+        } catch (error) {
+            console.error('Error in getUsersPerPage');
+            throw error;
+        }
+    },
 }
+
+
 
 export default userService;

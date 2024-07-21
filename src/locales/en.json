@@ -23,8 +23,21 @@
     },
     "dashboard": {
       "title": "Painel"
+    },
+    "users": {
+      "title": "Users",
+      "image": "Profile picture",
+      "name": "First Name",
+      "lastName": "Last Name",
+      "email": "E-mail",
+      "actions": "Edit / Delete"
     }
   },
+  "navigation": {
+    "addUser": "Add User",
+    "listUsers": "List Users"
+  },
+
   "header": {
     "title": "Bobby Soluções Educativas",
     "idiom": "language",

@@ -23,7 +23,20 @@
     },
     "dashboard": {
       "title": "Painel"
+    },
+    "users": {
+      "title": "usuários",
+      "image": "Imagem de perfil",
+      "name": "Nome",
+      "lastName": "Sobrenome",
+      "email": "E-mal",
+      "actions": "Editar / Excluir"
     }
+  },
+
+  "navigation": {
+    "addUser": "Adicionar usuários",
+    "listUsers": "Listar Usuáros"
   },
 
   "header": {

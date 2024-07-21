@@ -27,7 +27,7 @@
 
     <v-dialog v-model="dialog" max-width="800px">
       <v-card>
-        <v-card-title>
+        <v-card-title class="d-flex justify-lg-space-between align-center">
           <span>{{ title }}</span>
           <v-btn @click="dialog = false" icon>
             <v-icon>mdi-close</v-icon>
