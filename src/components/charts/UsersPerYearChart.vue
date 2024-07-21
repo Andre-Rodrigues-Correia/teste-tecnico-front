@@ -1,21 +1,22 @@
 <template>
   <AppLoader v-if="isLoad" />
-  <PieChart v-else :series="chartSeries" :chart-options="chartOptions" />
+  <AppBarChart v-else :series="chartSeries" :chart-options="chartOptions" />
 
   <Snackbar v-model="snackbar.visible" :title="snackbar.title"
             :message="snackbar.message" @close-snackbar="snackbar.visible = false"
   />
+
 </template>
 
 <script>
-import PieChart from "@/components/charts/base/PieChart.vue";
+import AppBarChart from "@/components/charts/base/BarChart.vue";
 import userService from "@/services/userService";
 import AppLoader from "@/components/generics/Loader.vue";
 import Snackbar from "@/components/generics/Snackbar.vue";
 
 export default {
   name: 'AppUserPerAgeChart',
-  components: {Snackbar, AppLoader, PieChart },
+  components: {Snackbar, AppLoader, AppBarChart },
   data() {
     return {
       isLoad: false,
@@ -26,12 +27,12 @@ export default {
       },
       chartOptions: {
         chart: {
-          type: 'pie',
+          type: 'bar',
           background: 'transparent',
           foreColor: '#255aee',
           toolbar: {
             show: false
-          },
+          }
         },
         theme: {
           mode: 'dark',
@@ -43,15 +44,25 @@ export default {
             shadeIntensity: 0.65
           },
         },
-        legend: {
-          position: 'top'
+        xaxis: {
+          categories: [],
+          title: {
+            text: 'Ano'
+          },
         },
-        labels: [
-            this.$t('charts.userPerAgeChart.labels.below20'),
-            this.$t('charts.userPerAgeChart.labels.between20And60'),
-            this.$t('charts.userPerAgeChart.labels.above60')]
+        yaxis: {
+          title: {
+            text: 'Quantidade'
+          }
+        },
+        labels: ['Abaixo de 20 anos', '20 anos a 60 anos', 'Acima de 60 anos']
       },
-      chartSeries: []
+      chartSeries: [
+        {
+          name: 'Usuários',
+          data: []
+        }
+      ]
     }
   },
   async created() {
@@ -63,38 +74,26 @@ export default {
       try {
         const data = await userService.getAllUsers();
 
-        const currentYear = new Date().getFullYear();
-        const ageGroups = {
-          below20: 0,
-          between20And60: 0,
-          above60: 0
-        };
+        const map = {};
 
         data.forEach(user => {
-
-          const yearOfBirth = user.year;
-          const age = currentYear - yearOfBirth;
-
-          if (age < 20) {
-            ageGroups.below20++;
-          } else if (age >= 20 && age <= 60) {
-            ageGroups.between20And60++;
-          } else if (age > 60) {
-            ageGroups.above60++;
+          if (!map[user.year]) {
+            map[user.year] = 0;
           }
+          map[user.year]++;
         });
 
-        this.chartSeries = [
-          ageGroups.below20,
-          ageGroups.between20And60,
-          ageGroups.above60
-        ];
+
+        this.chartOptions.xaxis.categories = Object.keys(map);
+        this.chartSeries[0].data = Object.values(map);
       } catch (error) {
         console.error(error);
         this.snackbar.visible = true;
       } finally {
         this.isLoad = false;
       }
+
+
     }
   }
 }

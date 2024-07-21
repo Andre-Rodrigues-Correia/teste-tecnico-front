@@ -1,12 +1,12 @@
 <template>
-  <VueApexCharts type="bar" height="400" :options="chartOptions" :series="series"></VueApexCharts>
+  <VueApexCharts type="line" height="400" :options="chartOptions" :series="series"></VueApexCharts>
 </template>
 
 <script>
-
 import VueApexCharts from "vue3-apexcharts";
+
 export default {
-  name: 'AppBarChart',
+  name: 'AppLineChart',
   components: {
     VueApexCharts
   },
@@ -21,5 +21,4 @@ export default {
     }
   },
 }
-
 </script>

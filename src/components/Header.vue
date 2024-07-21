@@ -1,6 +1,6 @@
 <template>
   <v-app-bar color="primary">
-    <v-toolbar-title class="cursor-pointer" @click="navigateTo('home')">{{ $t('header.title').toUpperCase() }}</v-toolbar-title>
+    <v-toolbar-title class="cursor-pointer" @click="navigateTo('dashboard')">{{ $t('header.title').toUpperCase() }}</v-toolbar-title>
     <v-spacer></v-spacer>
 
     <v-btn icon @click="toggleTheme">

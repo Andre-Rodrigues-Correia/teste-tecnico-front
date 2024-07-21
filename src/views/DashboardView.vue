@@ -22,7 +22,9 @@
 
 <script >
 import Card from "@/components/generics/Card.vue";
+import UsersPerYearChart from "@/components/charts/UsersPerYearChart.vue";
 import UsersPerAgeChart from "@/components/charts/UsersPerAgeChart.vue";
+import UsersPerColorsChart from "@/components/charts/UsersPerColorsChart.vue";
 export default {
   name: 'DashboardView',
   components: {
@@ -31,7 +33,9 @@ export default {
   data(){
     return {
       cards: [
+        { title: this.$t('charts.userPerYearChart.title'), resume: this.$t('charts.userPerYearChart.resume'), component: UsersPerYearChart },
         { title: this.$t('charts.userPerAgeChart.title'), resume: this.$t('charts.userPerAgeChart.resume'), component: UsersPerAgeChart },
+        { title: this.$t('charts.userPerColorsChart.title'), resume: this.$t('charts.userPerColorsChart.resume'), component: UsersPerColorsChart },
       ],
     }
   }

@@ -8,11 +8,11 @@ import { createVuetify } from 'vuetify'
 const lightTheme = {
     dark: false,
     colors: {
-        primary: '#1976D2',
-        secondary: '#424242',
-        accent: '#82B1FF',
+        primary: '#27374D',
+        secondary: '#526D82',
+        accent: '#B43F3F',
         error: '#FF5252',
-        info: '#2196F3',
+        info: '#DDE6ED',
         success: '#4CAF50',
         warning: '#FFC107'
     },
@@ -21,11 +21,11 @@ const lightTheme = {
 const darkTheme = {
     dark: true,
     colors: {
-        primary: '#2196F3',
-        secondary: '#424242',
-        accent: '#FF4081',
+        primary: '#92C7CF',
+        secondary: '#AAD7D9',
+        accent: '#B43F3F',
         error: '#FF5252',
-        info: '#2196F3',
+        info: '#FBF9F1',
         success: '#4CAF50',
         warning: '#FFC107'
     },

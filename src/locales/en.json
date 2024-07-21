@@ -49,7 +49,9 @@
       "errorEditMessage": "Failed to edit user"
     },
     "notFound": {
-      "title": "You do not have access to this content"
+      "title": "You do not have access to this content",
+      "login": "Navigate to Login",
+      "register": "Register"
     }
   },
   "navigation": {
@@ -80,8 +82,21 @@
     "errorTitle": "Error loading data",
     "errorMessage": "Unable to retrieve graph data",
     "userPerAgeChart": {
+      "title": "Users X Age",
+      "resume" : "Number of users by age range",
+      "labels": {
+        "below20": "Below 20 years",
+        "between20And60": "Between 20 and 60 years",
+        "above60": "Above 60 years"
+      }
+    },
+    "userPerYearChart": {
       "title": "Users X Year",
       "resume" : "Number of users by year of birth"
+    },
+    "userPerColorsChart": {
+      "title": "Users X Colors",
+      "resume" : "Users by colors and years"
     }
   },
 

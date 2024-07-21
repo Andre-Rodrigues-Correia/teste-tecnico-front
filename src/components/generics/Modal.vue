@@ -3,7 +3,7 @@
       v-model="dialog"
       max-width="600"
   >
-    <v-card prepend-icon="mdi-account" :title="title">
+    <v-card :title="title">
       <v-card-text>
         {{ text }}
       </v-card-text>

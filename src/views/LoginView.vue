@@ -6,7 +6,7 @@
       <v-text-field :label="$t('views.login.password')" v-model="password" :rules="[rules.required]"></v-text-field>
 
       <div class="d-flex justify-center align-center">
-        <v-btn class="ma-4" type="submit">{{ $t('buttons.login') }}</v-btn>
+        <v-btn class="ma-4" color="primary" type="submit">{{ $t('buttons.login') }}</v-btn>
 
         <p class="ma-4">
           {{ $t('views.login.registerMessage')}}

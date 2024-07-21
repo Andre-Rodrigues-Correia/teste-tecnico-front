@@ -49,7 +49,9 @@
       "errorEditMessage": "Falha ao editar usuário"
     },
     "notFound": {
-      "title": "Você não tem acesso a esse conteudo"
+      "title": "Você não tem acesso a esse conteudo",
+      "login": "Ir para Login",
+      "register": "Cadastre-se"
     }
   },
 
@@ -81,8 +83,21 @@
     "errorTitle": "Erro ao carregar dados",
     "errorMessage": "Não foi possível recuperar os dados do gráfico",
     "userPerAgeChart": {
-      "title": "Usuários X Ano",
-      "resume" : "Quandtidade de usuários por ano de nascimento"
+      "title": "Usuários X Idade",
+      "resume" : "Quandtidade de usuários por intervalo de idade",
+      "labels": {
+        "below20": "Abaixo de 20 anos",
+        "between20And60": "Entre 20 e 60 anos",
+        "above60": "Acima de 60 anos"
+      }
+    },
+    "userPerYearChart": {
+      "title": "Users X Ano",
+      "resume" : "Numero de usuários por ano de nascimento"
+    },
+    "userPerColorsChart": {
+      "title": "Users X Cor",
+      "resume" : "usuários por cor e ano"
     }
   },
 

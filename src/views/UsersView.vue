@@ -21,8 +21,9 @@
     >
 
       <template v-slot:[`item.avatar`]="{ item }">
-        <v-avatar >
-          <v-img :src="item.avatar"></v-img>
+        <v-avatar>
+          <v-img v-if="item.avatar" :src="item.avatar"></v-img>
+          <v-img v-else src="https://cvhrma.org/wp-content/uploads/2015/07/default-profile-photo.jpg"></v-img>
         </v-avatar>
       </template>
 
@@ -171,7 +172,6 @@ export default {
 
     },
     cancelAction(){
-      console.log('aqui')
       this.selectedUser = {}
       this.showUserModal = false;
       this.isEdit = false;
