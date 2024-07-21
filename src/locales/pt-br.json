@@ -33,14 +33,25 @@
       "actions": "Editar / Excluir",
       "job": "Trabalho",
       "createUser": "Cadastrar usuário",
+      "editUser": "Editar usuário",
       "deleteUserTitle": "Tem certeza que dejesa excluir esse usuário?",
-      "deleteUserText": "Clique em 'OK' para prosseguir com a exclusão"
+      "deleteUserText": "Clique em 'OK' para prosseguir com a exclusão",
+      "successTitle": "Sucesso",
+      "errorTitle": "Erro",
+      "successDeleteMessage": "Usuário excluido com succeso",
+      "successAddMessage": "Usuário adicionado com succeso",
+      "successEditMessage": "Usuário editado com succeso",
+      "errorDeleteMessage": "Falha ao excluir usuário",
+      "errorAddMessage": "Falha ao adicionar usuário",
+      "errorEditMessage": "Falha ao editar usuário"
     }
   },
 
   "navigation": {
+    "users": "Usuários",
     "addUser": "Adicionar usuários",
-    "listUsers": "Listar Usuáros"
+    "listUsers": "Listar Usuáros",
+    "dashboard": "Painel de gráficos"
   },
 
   "header": {

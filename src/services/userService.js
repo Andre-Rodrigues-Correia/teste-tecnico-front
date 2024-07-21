@@ -41,6 +41,35 @@ const userService = {
             throw error;
         }
     },
+
+    addUser: async function (user) {
+        try {
+            const response = await axios.post(`${BASE_URL}/api/users`, user);
+            return response.data;
+        } catch (error) {
+            console.error('Error in createUser');
+            throw error
+        }
+    },
+
+    updateUser: async function (user) {
+        try {
+            const response = await axios.put(`${BASE_URL}/api/users/${user.id}`, user);
+            return response.data;
+        } catch (error) {
+            console.error('Error in createUser');
+            throw error
+        }
+    },
+    deleteUser: async function (user) {
+        try {
+            const response = await axios.delete(`${BASE_URL}/api/users/${user.id}`);
+            return response.data;
+        } catch (error) {
+            console.error('Error in createUser');
+            throw error
+        }
+    }
 }
 
 

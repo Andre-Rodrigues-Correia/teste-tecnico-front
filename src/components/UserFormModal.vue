@@ -2,8 +2,9 @@
     <v-dialog
       v-model="dialog"
       max-width="600"
+      persistent
     >
-      <v-card prepend-icon="mdi-account" :title="$t('views.users.creatUser').toUpperCase()">
+      <v-card prepend-icon="mdi-account" :title="isEdit ? $t('views.users.editUser').toUpperCase() : $t('views.users.createUser').toUpperCase()">
         <v-card-text>
           <v-text-field :label="$t('views.users.name')" v-model="selectedUser.first_name" :rules="[rules.required]"></v-text-field>
           <v-text-field :label="$t('views.users.lastName')" v-model="selectedUser.last_name" :rules="[rules.required]"></v-text-field>
@@ -59,9 +60,6 @@ export default {
         required: (value) => !!value || this.$t('warnings.requiredField'),
       },
     }
-  },
-  created() {
-    console.log(this.selectedUser)
   },
   computed: {
     dialog: {

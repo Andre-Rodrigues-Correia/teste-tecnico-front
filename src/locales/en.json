@@ -33,13 +33,24 @@
       "job": "job",
       "actions": "Edit / Delete",
       "createUser": "Create user",
+      "editUser": "Edit User",
       "deleteUserTitle": "Are you sure you want to delete this user?",
-      "deleteUserText": "Click 'OK' to proceed with the deletion"
+      "deleteUserText": "Click 'OK' to proceed with the deletion",
+      "successTitle": "Success",
+      "errorTitle": "Error",
+      "successDeleteMessage": "User successfully deleted",
+      "successAddMessage": "User successfully added",
+      "successEditMessage": "User successfully edited",
+      "errorDeleteMessage": "Failed to delete user",
+      "errorAddMessage": "Failed to add user",
+      "errorEditMessage": "Failed to edit user"
     }
   },
   "navigation": {
+    "users": "Users",
     "addUser": "Add User",
-    "listUsers": "List Users"
+    "listUsers": "List Users",
+    "dashboard": "Dashboard"
   },
 
   "header": {
