@@ -30,7 +30,11 @@
       "name": "First Name",
       "lastName": "Last Name",
       "email": "E-mail",
-      "actions": "Edit / Delete"
+      "job": "job",
+      "actions": "Edit / Delete",
+      "createUser": "Create user",
+      "deleteUserTitle": "Are you sure you want to delete this user?",
+      "deleteUserText": "Click 'OK' to proceed with the deletion"
     }
   },
   "navigation": {
@@ -51,6 +55,7 @@
     "save": "Save",
     "close": "Close",
     "delete": "Delete",
+    "cancel": "Cancel",
     "ok": "OK"
   },
 

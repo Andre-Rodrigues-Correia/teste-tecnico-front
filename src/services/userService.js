@@ -19,7 +19,6 @@ const userService = {
             const response = await axios.get(`${BASE_URL}/api/unknown`, {params: {
                     per_page: 20
                 }});
-            console.log(response)
             return response.data.data;
         } catch (error) {
             console.error('Error in getAllUsers');

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer expand-on-hover rail>
+    <v-navigation-drawer v-if="!$route.meta.hideNavigation" expand-on-hover rail>
       <v-list nav>
         <v-list-item
             prepend-icon="mdi-account-multiple-plus"

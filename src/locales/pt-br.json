@@ -30,7 +30,11 @@
       "name": "Nome",
       "lastName": "Sobrenome",
       "email": "E-mal",
-      "actions": "Editar / Excluir"
+      "actions": "Editar / Excluir",
+      "job": "Trabalho",
+      "createUser": "Cadastrar usuário",
+      "deleteUserTitle": "Tem certeza que dejesa excluir esse usuário?",
+      "deleteUserText": "Clique em 'OK' para prosseguir com a exclusão"
     }
   },
 
@@ -51,6 +55,7 @@
     "login": "Entrar",
     "save": "Salvar",
     "close": "Fechar",
+    "cancel": "Cancelar",
     "delete": "Excluir",
     "ok": "OK"
   },
