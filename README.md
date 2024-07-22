@@ -74,3 +74,25 @@ Para permitir a navegação na aplicação, criei um navigation drawer e um Head
 - Apesar da sintaxe ser semelhante ao Vue.js 2, a versão utilizada é a 3.
 - A paginação de usuários foi implementada na v-data-table de forma visual. Não foi consumida a API paginando, pois ao realizar alguma alteração de registro, ao paginar essas alterações se perdiam e o usuário não conseguiria visualizá-las. A v-data-table lista os usuários e possui uma quantidade de usuários exibidos por página e a possibilidade de mudança dessa quantidade.
 
+
+# Telas e funcionalidades da aplicação
+
+### Registro e login de usuários
+![Registro e login de usuários](./docs/gifs/registro-e-login.gif)
+
+### Navegação pela aplicação
+![Registro e login de usuários](./docs/gifs/navegação.gif)
+
+### CRUD de usuários
+![Registro e login de usuários](./docs/gifs/crud.gif)
+
+### Responsividade
+![Registro e login de usuários](./docs/gifs/responsividade.gif)
+
+### Autenticação e segurança
+![Registro e login de usuários](./docs/gifs/autenticação.gif)
+
+
+Em relação aos testes, optei por não implementá-los nesta aplicação. Embora eu tenha experiência em implementar testes no backend, ainda estou estudando e aprendendo sobre testes no frontend.
+
+Prefiri não incluir testes superficiais que poderiam não agregar valor real ao projeto. No entanto, reconheço plenamente a importância dos testes para manter a saúde de uma aplicação.
