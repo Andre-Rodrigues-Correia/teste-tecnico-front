@@ -54,7 +54,7 @@ Usuário para teste:
 
 ## Como foi resolver o teste ?
 ### Estrutura
-Primeiramente, pensei em como estruturar o projeto de maneira organizada, que fosse fácil de manter e adicionar novas funcionalidades. Estruturei o projeto em quatro views principais: Registro de Usuário, Login, Dashboard e Usuários.
+Primeiramente, pensei em como estruturar o projeto de maneira organizada e responsiva, que fosse fácil de manter e adicionar novas funcionalidades. Estruturei o projeto em quatro views principais: Registro de Usuário, Login, Dashboard e Usuários.
 
 As views de Registro e Login são simples, com um formulário e suas devidas validações.
 
