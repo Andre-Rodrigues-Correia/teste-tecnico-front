@@ -5,7 +5,7 @@ Este repositório contém uma mini-aplicação para controle de usuários desenv
 
 Além do CRUD de usuários, foi desenvolvida uma tela de dashboard com gráficos, exibindo dados dos usuários cadastrados na aplicação.
 
-Para simular o consumo de uma API real, foi utilizada a API [reqres.in](https://reqres.in/), que fornece todas as rotas necessárias para a aplicação, desde registro e login até exclusão. O CRUD foi realizado utilizando essa API, juntamente com Vuex, que possibilitou otimizar a aplicação, evitando requisições desnecessárias e mantendo os dados visualmente atualizados para o usuário.
+Para simular o consumo de uma API real, foi utilizada a API [reqres.in](https://reqres.in/), que fornece todas as rotas necessárias para a aplicação, desde registro e login até exclusão. O CRUD foi realizado utilizando essa API, juntamente com Vuex, que possibilitou otimizar a aplicação e manter os dados visualmente atualizados para o usuário.
 
 Por se tratar de uma API fake, não é possível persistir os dados. Portanto, em caso de reload na aplicação, as informações voltarão ao padrão da API.
 
