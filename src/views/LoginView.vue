@@ -2,8 +2,8 @@
   <v-container class="d-flex flex-column ">
     <h1 class="mx-auto">{{$t('views.login.title').toUpperCase()}}</h1>
     <v-form  ref="form" v-model="valid" @submit.prevent="login" class="w-75 mx-auto">
-      <v-text-field :label="$t('views.login.email')" v-model="email" :rules="[rules.required, rules.email]"></v-text-field>
-      <v-text-field :label="$t('views.login.password')" v-model="password" :rules="[rules.required]"></v-text-field>
+      <v-text-field type="email" :label="$t('views.login.email')" v-model="email" :rules="[rules.required, rules.email]"></v-text-field>
+      <v-text-field type="password" :label="$t('views.login.password')" v-model="password" :rules="[rules.required]"></v-text-field>
 
       <div class="d-flex justify-center align-center">
         <v-btn class="ma-4" color="primary" type="submit">{{ $t('buttons.login') }}</v-btn>
