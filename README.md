@@ -54,11 +54,11 @@ Usuário para teste:
 
 ## Como foi resolver o teste ?
 ### Estrutura
-Primeiramente, pensei em como estruturar o projeto de maneira organizada e responsiva, que fosse fácil de manter e adicionar novas funcionalidades. Estruturei o projeto em quatro views principais: Registro de Usuário, Login, Dashboard e Usuários.
+Primeiramente, pensei em como estruturar o projeto de maneira organizada, que fosse fácil de manter e adicionar novas funcionalidades. Estruturei o projeto em quatro views principais: Registro de Usuário, Login, Dashboard e Usuários.
 
 As views de Registro e Login são simples, com um formulário e suas devidas validações.
 
-A view de Dashboard foi estruturada com um grid para permitir a exibição dos gráficos de maneira organizada. Para facilitar a replicação e manutenção dos gráficos, criei três componentes que formam um card de gráfico:
+A view de Dashboard foi estruturada com um grid para permitir a exibição dos gráficos de maneira organizada e responsiva. Para facilitar a replicação e manutenção dos gráficos, criei três componentes que formam um card de gráfico:
 
 1. Componente Base: Recebe o layout e os dados a serem exibidos.
 2. Componente de Dados: Consome, trata e fornece os dados para o componente base.
