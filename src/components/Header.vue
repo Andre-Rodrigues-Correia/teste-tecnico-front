@@ -7,22 +7,7 @@
       <v-icon>{{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
     </v-btn>
 
-    <v-menu transition="fade-transition">
-      <template v-slot:activator="{ props }">
-        <v-btn v-bind="props">
-          {{ $t('header.idiom')}}
-        </v-btn>
-      </template>
-      <v-list>
-        <v-list-item
-            v-for="(language, index) in languages"
-            :key="index"
-            @click="changeLanguage(language.code)"
-        >
-          <v-list-item-title>{{ language.label }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+
 
     <v-btn v-if="!$route.meta.hideNavigation" icon @click="logout" class="mr-2">
       <v-icon icon="mdi-logout"></v-icon>
